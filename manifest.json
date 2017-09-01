@@ -1,0 +1,6 @@
+{
+  "short_name": "react-app",
+  "name": "react-js-comments",
+  "start_url": "./index.html",
+  "display": "standalone",
+}

@@ -103,17 +103,17 @@ class Add extends React.Component{
             type='text'
             className='add-author'
             defaultValue=''
-            placeholder='Your name' />
+            placeholder='name' />
           <input
             ref='entAvatar'
             type='text'
             className='add-avatar'
-            placeholder='Image URL (not necessary)'/>
+            placeholder='img url (not necessary)'/>
           <textarea
             ref='entText'
             onChange={this.checkEmptyText.bind(this)}
             className='add-text' defaultValue=''
-            placeholder='Put yout text here'
+            placeholder=''
            />
           <label className='add-checkrule'>
             <input
@@ -125,7 +125,7 @@ class Add extends React.Component{
             onClick={this.addNew.bind(this)}
             className='add-btn'
             disabled={this.state.disabled || this.state.isEmptyName || this.state.isEmptyText}>
-            add
+            post
           </button>
         </form>
       </div>

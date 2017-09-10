@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ReactCSSTransitionGroupd from 'react-addons-css-transition-group';
 
 const content = [
   {
@@ -181,13 +182,19 @@ class App extends React.Component {
       <div className='app'>
         <Add addPost={this.add}/>
         <div className='slider'>
-          <div className='content'>{this.state.content.map(item =>
-             <Section
-                key={item.id}
-                id={item.id}
-                avatar={item.avatar}
-                name={item.name}
-                comment={item.comment} />)}
+          <div className='content'>
+            <ReactCSSTransitionGroupd
+              transitionName='fade'
+              transitionEnterTimeout={200}
+              transitionLeaveTimeout={200}>
+              {this.state.content.map(item =>
+                <Section
+                  key={item.id}
+                  id={item.id}
+                  avatar={item.avatar}
+                  name={item.name}
+                  comment={item.comment} />)}
+            </ReactCSSTransitionGroupd>
           </div>
           <div className='control-panel'>{content.map(item =>
             <ControlButton

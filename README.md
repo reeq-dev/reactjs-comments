@@ -1,1 +1,1 @@
-link to run this app https://noolie.github.io/reactjs-comments/
+link to run this app https://reeq-dev.github.io/reactjs-comments/
